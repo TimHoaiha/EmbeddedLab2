@@ -1,0 +1,10 @@
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+
+int a = 0b1010000000000001;
+int b = 0b1011000000000001;
+
+int c = a + b;
+	while(1);
+}
