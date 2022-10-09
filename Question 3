@@ -1,0 +1,19 @@
+
+;store values
+			mov.b   #00B1h, R4
+			mov.b   #0C11h, R5
+			mov.b   #0001h, R6
+;and operations
+			and R6, R4
+			and R6, R5
+;compare results
+			cmp R4, R6
+            jeq  R4eqR6 ;label 1
+            jmp $
+R4eqR6: ;label 1 definition
+			cmp R5, R6
+            jeq  R5eqR6 ;label 2
+            jmp $
+R5eqR6: ;label 2 defintion
+			mov.w #0ff0h, R9
+			jmp $
