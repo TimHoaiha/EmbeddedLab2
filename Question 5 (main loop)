@@ -1,0 +1,36 @@
+mov.w #000Bh, R4
+mov.w #000Ah, R5
+
+	cmp R4, R5
+
+	jl less
+	jge greater_equal
+
+	jmp $
+
+less:
+	call #less_function
+	jmp $
+
+greater:	jeq equal
+	call #greater_equal_function
+	jmp $
+
+less_function:
+	mov.w #0006h, &2001h
+	mov.w #0007h, &2003h
+	mov.w #0008h, &2005h
+	mov.w #0009h, &2007h
+	mov.w #000Ah, &2009h
+	sub #1h, R4
+
+equal:
+	jmp $
+
+greater_equal_function:
+	mov.w #0001h, &2001h
+	mov.w #0002h, &2003h
+	mov.w #0003h, &2005h
+	mov.w #0004h, &2007h
+	mov.w #0005h, &2009h
+	sub #1h, R4
