@@ -1,0 +1,11 @@
+
+
+ call  #question6
+ jmp $
+
+
+ question6:
+ 	mov.w #2D97h, R1
+ 	mov.w #6239h, R2
+ 				and R1, R2
+ 				or.w R2, &203Ch
