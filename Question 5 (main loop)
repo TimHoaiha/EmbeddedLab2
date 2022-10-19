@@ -1,5 +1,5 @@
-mov.w #000Bh, R4
-mov.w #000Ah, R5
+ mov.w #000Bh, R4
+ mov.w #000Ah, R5
 
 	cmp R4, R5
 
